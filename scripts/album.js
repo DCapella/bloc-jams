@@ -1,3 +1,5 @@
+var count = 0;
+
 var albumPicasso = {
   title:       'The Colors',
   artist:      'Pablo Picasso',
@@ -28,6 +30,21 @@ var albumMarconi = {
   ]
 };
 
+var albumMayor = {
+  title:       'Continuum',
+  artist:      'John Mayer',
+  label:       'Columbia Records',
+  year:        '2006',
+  albumArtUrl: 'assets/images/album_covers/Continuum_(album).png',
+  songs: [
+    { title: 'Waiting on the World to change',     duration: '3:21' },
+    { title: 'I Don\'t Trust Myself',              duration: '4:52' },
+    { title: 'Belief',                             duration: '4:02' },
+    { title: 'Gravity',                            duration: '4:06' },
+    { title: 'Slow Dancing in a Burning Room',     duration: '4:02' }
+  ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
   var template =
       '<tr class="album-view-song-item">'
@@ -40,6 +57,13 @@ var createSongRow = function(songNumber, songName, songLength) {
 };
 
 var setCurrentAlbum = function(album) {
+  if(album === albumPicasso) {
+    count = 1;
+  } else if (album === albumMarconi) {
+    count = 2;
+  } else {
+    count = 3;
+  }
   var albumTitle =       document.getElementsByClassName('album-view-title')[0];
   var albumArtist =      document.getElementsByClassName('album-view-artist')[0];
   var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
@@ -60,4 +84,14 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
   setCurrentAlbum(albumPicasso);
+};
+
+var toSwitch = function() {
+ if (count == 1) {
+   setCurrentAlbum(albumMarconi);
+ } else if (count == 2) {
+   setCurrentAlbum(albumMayor);
+ } else {
+   setCurrentAlbum(albumPicasso);
+ }
 };
