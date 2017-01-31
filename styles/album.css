@@ -13,6 +13,10 @@ body.album {
   width: 60%;
 }
 
+/*=====================================================
+ALBUM - VIEW
+=====================================================*/
+
 .album-view-details {
   position: relative;
   top: 1.5rem;
@@ -47,6 +51,10 @@ body.album {
   border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
+/*=====================================================
+SONG ITEM
+=====================================================*/
+
 .song-item-number {
   width: 5%;
   min-width: 30px;
@@ -60,13 +68,13 @@ body.album {
   width: 5%;
 }
 
+/*=====================================================
+ALBUM - SONG
+=====================================================*/
+
 .album-song-button {
+  padding: 6px 0 0 2px;
   text-align: center;
-/*
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-*/
   font-size: 14px;
   background-color: white;
   color: rgb(210, 40, 123);
@@ -85,6 +93,10 @@ body.album {
 .album-song-button span {
   line-height: 28px;
 }
+
+/*=====================================================
+AT MEDIA
+=====================================================*/
 
 @media (max-width: 640px) and (min-width: 320px) {
   .album-view-details {
