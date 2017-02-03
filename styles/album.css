@@ -4,6 +4,7 @@ body.album {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+  padding-bottom: 200px;
 }
 
 .album-cover-art {
@@ -73,7 +74,9 @@ ALBUM - SONG
 =====================================================*/
 
 .album-song-button {
+/*
   padding: 6px 0 0 2px;
+*/
   text-align: center;
   font-size: 14px;
   background-color: white;
