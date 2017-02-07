@@ -1,4 +1,19 @@
 /*========================================================================*/
+/*SET SONG*/
+/*========================================================================*/
+var setSong = function(songNumber) {
+  currentlyPlayingSongNumber = parseInt(songNumber);
+  currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
+};
+
+/*========================================================================*/
+/*GET SONG NUMBER CELL*/
+/*========================================================================*/
+var getSongNumberCell = function(number) {
+  return $('.song-item-number[data-song-number="' + number + '"]');
+};
+
+/*========================================================================*/
 /*NEXT SONG*/
 /*========================================================================*/
 var nextSong = function() {
