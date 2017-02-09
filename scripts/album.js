@@ -154,8 +154,8 @@ var createSongRow = function(songNumber, songName, songLength) {
         $('.main-controls .play-pause').html(playerBarPlayButton);
         playNow = "play";
         currentSoundFile.pause();
-        currentlyPlayingSongNumber = null;
-        currentSongFromAlbum = null;
+        //currentlyPlayingSongNumber = null;
+        //currentSongFromAlbum = null;
       }
       
     }
